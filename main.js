@@ -16,9 +16,12 @@ const friends = [
     {name: 'Vlad', friend: 'Makar'}
 ]
 
-const selectedFriend = friends.filter((user) => user.friend === 'Makar');
-console.log(selectedFriend);
-
+const aelectedFriend = friends.reduce((acc, obj) => {
+  if(obj.friend === 'Makar') {
+    acc.push(obj)
+  }
+  return acc
+}, [])
 
 const friends2 = [
     {name: 'Artem', friend: 6},
